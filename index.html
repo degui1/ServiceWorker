@@ -10,9 +10,33 @@
   <body>
     <header>
       <h1>Intro to Service Workers</h1>
-      <h2>Registration, Lifecycle, Dev Tools, &amp; Events</h2>
+      <h2>Cache API</h2>
     </header>
-
+    <!--
+      IMAGES
+      https://picsum.photos/id/1011/5472/3648
+      https://picsum.photos/id/1016/3844/2563
+    -->
+    <pre>
+      <code>
+    //CACHES
+    caches.delete(name).then(isGone=>{});
+    caches.has(name).then(hasFile=>{});
+    caches.keys().then(namesArray=>{});
+    caches.match(Request).then(cacheResponse=>{});
+    caches.open(name).then(cache=>{});
+    
+    //CACHE - from caches.open()
+    cache.add(Request).then(()=>{});
+    cache.addAll(Requests[]).then(()=>{});
+    //add and addAll === fetch() + cache.put()
+    cache.delete(Request, options).then(isGone=>{});
+    cache.keys([Request, options]).then((keysArray)=>{});
+    cache.match(Request, options).then((cacheResponse)=>{});
+    cache.matchAll([Request, options]).then((cacheResponses[])=>{});
+    cache.put(Request, Response).then(()=>{});
+      </code>
+    </pre>
     <main>
       <output></output>
     </main>

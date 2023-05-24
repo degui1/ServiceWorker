@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intro to Service Workers</title>
     <!-- import google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <header>
       <h1>Intro to Service Workers</h1>
-      <h2>Handling 404 Errors and Offline Issues</h2>
+      <h2>Messaging between Clients and Service Workers</h2>
     </header>
     <!--
       IMAGES
@@ -24,18 +24,19 @@
       https://picsum.photos/id/1016/3844/2563
     -->
     <main>
-      <p>
-        <a href="/nowhere.html">This link</a> takes you to a non-existant page.
-        Same effect as being offline.
-      </p>
-      <p>
-        <img src="/img/x.jpg" alt="sample image 1" />
-        Some water and a woman in a canoe.
-      </p>
-      <p>
-        <img src="/img/j.jpg" alt="sample image 2" />
-        A beautiful desert landscape.
-      </p>
+      <form id="colorForm" name="colorForm">
+        <p>
+          <label for="name">Character Name</label>
+          <input type="text" id="name" name="name" />
+        </p>
+        <p>
+          <label for="color">Favourite Colour</label>
+          <input type="color" id="color" name="color" />
+        </p>
+        <p>
+          <button id="btnSave">Save</button>
+        </p>
+      </form>
     </main>
     <script defer src="./js/app.js"></script>
   </body>

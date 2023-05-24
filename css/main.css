@@ -33,12 +33,32 @@ p {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
+form {
+  outline: 1px solid #999;
+}
+form p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem 1rem;
+}
+label,
+input {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
 main img {
-  /* max-width: 100%;
-  min-width: 200px; */
   width: clamp(200px, 400px, 600px);
 }
 main a {
   color: orange;
   text-decoration-style: wavy;
+}
+button {
+  font-size: 1rem;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 0.25rem 2rem;
+  border: none;
 }
